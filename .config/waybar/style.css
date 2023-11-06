@@ -1,0 +1,202 @@
+@import "./themes/mocha.css";
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family:
+    FiraSans,
+    Hack Nerd Font,
+    FontAwesome;
+  font-family:
+    FiraSans,
+    Hack Nerd Font,
+    FontAwesome;
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: alpha(@base, 0.6);
+  /* color: #ffffff; */
+  color: @text;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.modules-left {
+  background-color: alpha(@mauve, 0.2);
+  margin-left: 0px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  /*padding-left: 10px;*/
+  /* border-radius: 20px; */
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+#window,
+#workspaces {
+  padding: 0px 10px 0px 5px;
+  color: rgba(137, 180, 250, 1);
+}
+/* #custom-ends { */
+/*   padding: 2px 0px 2px 0px; */
+/*   background-image: linear-gradient( */
+/*     to left, */
+/*     rgba(203, 166, 247, 0), */
+/*     rgba(203, 166, 247, 0.05), */
+/*     rgba(203, 166, 247, 0.3) */
+/*   ); */
+/*   color: rgba(255, 132, 156, 0); */
+/* } */
+
+.modules-center {
+  background-color: rgba(127, 132, 156, 0.2);
+  padding: 2px 5px 2px 5px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 20px;
+}
+.modules-right {
+  background-color: rgba(0, 0, 0, 0);
+  margin-right: 10px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 20px;
+}
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+  background-color: #3f3f3f;
+}
+
+window#waybar.chromium {
+  background-color: #000000;
+  border: none;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -1px #ffffff;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+  color: rgba(205, 214, 244, 1);
+  /* color: #ffffff; */
+}
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+  background-color: #64727d;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+/* -----------------------------------------------------
+* Hardware Group
+* use waybar - l debug to get classes from console
+* ----------------------------------------------------- */
+
+#performance {
+  background-color: rgba(127, 132, 156, 0.2);
+  margin-right: 10px;
+  border-radius: 20px;
+  padding: 0px 5px 0px 5px;
+}
+
+#cpu,
+#memory,
+#temperature {
+  padding: 0px 10px 0px 5px;
+}
+
+#clock {
+  padding: 2px 5px 2px 5px;
+  background: transparent;
+  color: #ffffff;
+}
+#backlight,
+#network,
+#pulseaudio,
+#tray {
+  padding: 2px 10px 2px 5px;
+  background: transparent;
+  color: #ffffff;
+}
+
+#battery {
+  padding: 2px 20px 2px 0px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #ffffff;
+  background-color: #26a65b;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#temperature.critical {
+  background-color: #eb4d4b;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
