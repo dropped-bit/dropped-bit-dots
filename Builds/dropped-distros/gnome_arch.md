@@ -85,6 +85,9 @@ sleep 5
 sudo reboot
 ```
 
+# Alacritty - fix window decorations for gtk
+
+env -u WAYLAND_DISPLAY alacritty
 
 ## GET NVIDIA TO WORK
 https://forum.manjaro.org/t/howto-use-wayland-with-proprietary-nvidia-drivers/36130

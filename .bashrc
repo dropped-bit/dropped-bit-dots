@@ -13,3 +13,4 @@ if [ "$TERM" != "linux" ]; then
 	eval "$(starship init bash)"
   exec fish
 fi
+. "$HOME/.cargo/env"
