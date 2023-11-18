@@ -5,7 +5,7 @@
 
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 5, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "margin-top": 0,
     "spacing": 4, // Gaps between modules (4px)
@@ -13,7 +13,7 @@
     "modules-left": ["hyprland/workspaces"],
     //"modules-left": ["group/workspaces-group"], 
     "modules-center": ["clock"],
-    "modules-right": ["group/performance", "tray", "pulseaudio", "network", "backlight", "battery"], 
+    "modules-right": ["group/performance","group/coreutils"],
     
 
     // ========================================
@@ -23,26 +23,26 @@
 
     "hyprland/workspaces": {
 	 "active-only": false,
-         "disable-scroll": true,
-         "all-outputs": true,
-         "warp-on-scroll": false,
-         "format": "{icon}",
-         "format-icons": {
-             "active": "",
-	     "urgent": "",
-             "focused": "",
-             "default": ""
+     "disable-scroll": true,
+     "all-outputs": false,
+     "warp-on-scroll": false,
+     "format": "{name}",
+     "format-icons": {
+         "active": "",
+         "urgent": "",
+         "focused": "",
+         "default": ""
          },
 	 "persistant_workspaces": {
 	 	"1":[],
 	 	"2":[],
 	 	"3":[],
-	 	"4":[]
+	 	"4":[],
 	 }
      },
     "tray": {
         // "icon-size": 21,
-        "spacing": 10
+        "spacing": 5
     },
     "clock": {
         // "timezone": "America/New_York",
@@ -55,14 +55,6 @@
     },
     "memory": {
         "format": "{}% "
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -77,10 +69,10 @@
             "critical": 10
         },
         "format": "{icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-charging": "{icon}",
+        "format-plugged": "{icon}",
         "format-alt": "{time} {icon}",
-        "tooltip-format": "{capacity}%",
+        "tooltip-format": "{capacity}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
@@ -99,7 +91,7 @@
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source} ",
         "format-bluetooth-muted": " {icon}  {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": " ",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -113,11 +105,6 @@
         },
         "on-click": "alsamixer"
     },
-    // End Icon
-    "custom/ends": {
-        "format": "SPAC",
-        "tooltip": false
-    },
 
     // ========================================
     // Modules configuration
@@ -128,7 +115,6 @@
         "orientation": "horizontal",
         "modules": [
             "hyprland/workspaces",
-            "custom/ends",
         ]
         },
 	// Groups Performance
@@ -138,7 +124,14 @@
 		"modules": [
 			"cpu",
 			"memory",
-			"temperature"
+		]
+	},
+	"group/coreutils": {
+		"orientation": "horizontal",
+		"modules": [
+            "tray",
+			"backlight",
+			"battery",
 		]
 	}
 }

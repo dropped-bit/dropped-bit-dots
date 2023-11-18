@@ -44,6 +44,9 @@ python
 python-pip
 python-pywal
 ripgrep
+xorg-xwayland
+btop
+gnome-keyring # to support vscode https://wiki.archlinux.org/title/Visual_Studio_Code
 }
 
 # AUR
@@ -54,6 +57,8 @@ swww-git # wallpaper agent
 swaylock-effects # swaylock but nice
 wlogout
 ttf-ms-fonts
+envycontrol # setting graphics mode https://github.com/bayasdev/envycontrol
+nwg-look # set gtk themes
 }
 
 ## misc
