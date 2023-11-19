@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wallpaper=~/Pictures/Wallpapers/neonforest.jpg
+wallpaper=~/.config/wallpapers/neonforest.jpg
 
 if [ -f $wallpaper ]
 then
