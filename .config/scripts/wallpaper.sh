@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Should be improved alot!
 
 wallpaper=~/.config/wallpapers/Bodacious_bovine_by_oklopfer_dark.png
 

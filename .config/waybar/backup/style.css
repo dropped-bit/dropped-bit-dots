@@ -1,4 +1,3 @@
-/**/
 @import "./themes/onedark.css";
 * {
   /* `otf-font-awesome` is required to be installed for icons */
@@ -26,7 +25,7 @@ window#waybar {
   color: @textcolor1;
   transition-property: background-color;
   padding: 0px;
-  margin: 0px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
   transition-duration: 0.5s;
 }
 
@@ -35,28 +34,32 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #workspaces {
-  background-color: alpha(@backgrounddark, 0.0);
-  margin: 0px 2px 0px 0px;
+  background-color: alpha(@backgrounddark, 0.5);
+  margin: 4px 2px 0px 0px;
   padding: 0px 2px 0px 2px;
-  border-radius: 0px;
+  border-radius: 15px;
+  opacity: 1;
 }
 /* workspaces button applies to inactive */
 #workspaces button {
-  background-color: alpha(@workspacesbackground2, 0.0);
-  color: alpha(@textcolor2, 0.5);
+  background-color: @workspacesbackground2;
+  color: alpha(@textcolor2, 0);
+  font-size: 6px;
   padding: 0px 5px;
-  margin: 0px 3px 0px 3px;
-  border-radius: 0px;
+  margin: 4px 3px 4px 3px;
+  border-radius: 15px;
   border: 0px;
   transition: all 0.3s ease-in-out;
+  opacity: 1;
 }
 
 #workspaces button.active {
-  background: alpha(@workspacesbackground1, 0.0);
+  background: @workspacesbackground1;
   color: alpha(@textcolor2, 1);
-  border-radius: 0px;
-  /* min-width: 20px; */
+  border-radius: 15px;
+  min-width: 40px;
   transition: all 0.3s ease-in-out;
+  opacity: 1;
 }
 
 #workspaces button:hover {
@@ -64,7 +67,7 @@ window#waybar {
   text-shadow: inherit;
   background: @backgroundlight;
   color: @textcolor1;
-  border-radius: 0px;
+  border-radius: 15px;
   opacity: 1;
 }
 
@@ -75,11 +78,12 @@ window#waybar {
 
 #clock {
   padding: 0px 5px 0px 5px;
-  background-color: alpha(@workspacesbackground1, 0);
-  color: alpha(@textcolor2, 1);
+  background-color: @workspacesbackground1;
+  color: @textcolor2;
   min-width: 50px;
-  margin: 0px 4px 0px 10px;
-  border-radius: 0px;
+  margin: 5px 4px 5px 10px;
+  border-radius: 15px;
+  opacity: 0.9;
 }
 
 /* -----------------------------------------------------
@@ -88,11 +92,12 @@ window#waybar {
 * ----------------------------------------------------- */
 
 #performance {
-  background-color: alpha(@background, 0.4);
-  margin: 0px 3px;
-  color: alpha(@textcolor2, 0.8);
-  border-radius: 0px;
+  background-color: @workspacesbackground1;
+  margin: 4px 3px;
+  color: @textcolor2;
+  border-radius: 20px;
   padding: 0px 5px 0px 5px;
+  opacity: 0.8;
 }
 
 #cpu,
@@ -104,11 +109,12 @@ window#waybar {
 * use waybar - l debug to get classes from console
 * ----------------------------------------------------- */
 #coreutils {
-  background-color: alpha(@background, 0.3);
+  background-color: @background;
+  margin: 4px 3px;
   color: @iconcolor;
-  margin: 0px 3px;
-  border-radius: 0px;
+  border-radius: 20px;
   padding: 0px 5px 0px 5px;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
 * Individual modules

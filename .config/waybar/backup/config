@@ -2,11 +2,10 @@
     // ========================================
     // Bar Configuration
     // ========================================
-    //
 
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "height": 5, // Waybar height (to be removed for auto height)
+    "height": 5, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "margin-top": 0,
     "spacing": 4, // Gaps between modules (4px)
@@ -23,24 +22,24 @@
 
 
     "hyprland/workspaces": {
-	"active-only": false,
-	"disable-scroll": true,
-	"all-outputs": false,
-	"warp-on-scroll": false,
-	"format": "{name}",
-	"format-icons": {
-		"active": "",
-		"urgent": "",
-		"focused": "",
-		"default": ""
-		},
-	"persistant_workspaces": {
-		"1": [],
-	 	"2": [],
-	 	"3" :[],
-	 	"4": []
-	 	}
-     	},
+	 "active-only": false,
+     "disable-scroll": true,
+     "all-outputs": false,
+     "warp-on-scroll": false,
+     "format": "{name}",
+     "format-icons": {
+         "active": "",
+         "urgent": "",
+         "focused": "",
+         "default": ""
+         },
+	 "persistant_workspaces": {
+	 	"1":[],
+	 	"2":[],
+	 	"3":[],
+	 	"4":[],
+	 }
+     },
     "tray": {
         // "icon-size": 21,
         "spacing": 5

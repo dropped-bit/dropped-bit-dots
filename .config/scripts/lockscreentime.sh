@@ -11,4 +11,4 @@ exec swayidle -w timeout 300 'swaylock -f' \
 # This will lock your screen after 60 seconds of inactivity, then turn off
 # your displays after 600 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
-
+#
