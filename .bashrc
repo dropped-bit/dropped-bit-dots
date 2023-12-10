@@ -11,6 +11,6 @@ PS1='[\u@\h \W]\$ '
 
 if [ "$TERM" != "linux" ]; then
 	eval "$(starship init bash)"
-  exec fish
+	exec fish
 fi
 . "$HOME/.cargo/env"

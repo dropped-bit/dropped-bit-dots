@@ -8,8 +8,7 @@ https://www.youtube.com/watch?v=8T0vvf1xm58
 1. Get keys working and iwctl
 
 ```
-loadkeys de-latin1
-iwctl
+loadkeys de-latin1 iwctl
 station wlan connect0 [NAME OF STATION]
 ```
 
@@ -179,4 +178,18 @@ Actions=New;
 [Desktop Action New]
 Name=New Terminal
 Exec=alacritty
+```
+
+```
+gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
+gsettings set org.gnome.shell.keybindings switch-to-application-1 []
+gsettings set org.gnome.shell.keybindings switch-to-application-2 []
+gsettings set org.gnome.shell.keybindings switch-to-application-3 []
+gsettings set org.gnome.shell.keybindings switch-to-application-4 []
+gsettings set org.gnome.shell.keybindings switch-to-application-5 []
+gsettings set org.gnome.shell.keybindings switch-to-application-6 []
+gsettings set org.gnome.shell.keybindings switch-to-application-7 []
+gsettings set org.gnome.shell.keybindings switch-to-application-8 []
+gsettings set org.gnome.shell.keybindings switch-to-application-9 []
+
 ```

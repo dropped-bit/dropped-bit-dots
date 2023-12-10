@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo "swayidle is running"
 exec swayidle -w timeout 300 'swaylock -f' \
          timeout 420 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' \
