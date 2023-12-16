@@ -32,7 +32,7 @@ window#waybar {
 
 /* Modules */
 .modules-right {
-  background-color: alpha(@background, 0.4);
+  background-color: alpha(@background, 0.6);
 }
 
 /* -----------------------------------------------------
@@ -93,9 +93,9 @@ window#waybar {
 * ----------------------------------------------------- */
 
 #performance {
-  background-color: alpha(@background, 0.4);
+  background-color: alpha(@background, 0.0);
   margin: 0px 3px;
-  color: alpha(@textcolor2, 0.8);
+  color: alpha(@textcolor2, 1);
   border-radius: 0px;
   padding: 0px 5px 0px 5px;
 }
@@ -109,8 +109,8 @@ window#waybar {
 * use waybar - l debug to get classes from console
 * ----------------------------------------------------- */
 #coreutils {
-  background-color: alpha(@background, 0.3);
-  color: @iconcolor;
+  background-color: alpha(@background, 0);
+  color: @textcolor2;
   margin: 0px 3px;
   border-radius: 0px;
   padding: 0px 5px 0px 5px;
@@ -162,7 +162,7 @@ window#waybar {
 }
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-  margin-left: 10;
+  margin-left: 2;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
