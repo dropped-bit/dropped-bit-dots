@@ -131,6 +131,7 @@
 		"orientation": "horizontal",
 		"modules": [
             "tray",
+            "pulseaudio",
 			"backlight",
 			"battery",
 		]

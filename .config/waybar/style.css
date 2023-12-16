@@ -30,6 +30,11 @@ window#waybar {
   transition-duration: 0.5s;
 }
 
+/* Modules */
+.modules-right {
+  background-color: alpha(@background, 0.4);
+}
+
 /* -----------------------------------------------------
  * Workspaces 
  * ----------------------------------------------------- */
