@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Should be improved alot!
 
-wallpaper=~/.config/wallpapers/Wallpaper_minotaur_dimmed_3840x2160.png
+wallpaper=~/.config/wallpapers/Bodacious_bovine_by_oklopfer_dark.png
 
 if [ -f $wallpaper ]
 then

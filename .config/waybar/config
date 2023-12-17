@@ -9,12 +9,12 @@
     // "height": 5, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "margin-top": 0,
-    "spacing": 4, // Gaps between modules (4px)
+    // "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     //"modules-left": ["group/workspaces-group"], 
     "modules-center": ["clock"],
-    "modules-right": ["group/performance","group/coreutils"],
+    "modules-right": ["group/performance", "group/coreutils", "tray"],
     
 
     // ========================================
@@ -51,17 +51,19 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "  {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "  {}%",
+        "tooltip": false
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon}",
+        "format": "{icon}  {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "tooltip-format": "{percent}%"
+        "tooltip": false,
+        "tooltip-format": "{percent}%",
     },
     "battery": {
         "states": {
@@ -69,14 +71,14 @@
             "warning": 20,
             "critical": 10
         },
-        "format": "{icon}",
-        "format-charging": "{icon}",
-        "format-plugged": "{icon}",
-        "format-alt": "{time} {icon}",
+        "format": "{icon}   {capacity}%",
+        "format-charging": "{icon}   {capacity}%",
+        "format-plugged": "{icon}   {capacity}%",
+        "tooltip": false,
         "tooltip-format": "{capacity}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [" ", " ", " ", " ", " "]
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -89,11 +91,11 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source} ",
-        "format-bluetooth-muted": " {icon}  {format_source}",
-        "format-muted": " ",
-        "format-source": "{volume}% ",
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {format_source} {volume}%",
+        "format-bluetooth-muted": "{icon}  {format_source}",
+        "format-muted": " ",
+        "format-source": "  {volume}%",
         "format-source-muted": "",
         "format-icons": {
             "headphone": " ",
@@ -104,7 +106,8 @@
             "car": "",
             "default": [" ", " ", " "]
         },
-        "on-click": "alsamixer"
+        "on-click": "alsamixer",
+        "tooltip": false
     },
 
     // ========================================
@@ -123,14 +126,13 @@
 	"group/performance": {
 		"orientation": "horizontal",
 		"modules": [
-			"cpu",
-			"memory",
+            "cpu",
+            "memory"
 		]
 	},
 	"group/coreutils": {
 		"orientation": "horizontal",
 		"modules": [
-            "tray",
             "pulseaudio",
 			"backlight",
 			"battery",

@@ -1,5 +1,5 @@
 /**/
-@import "./themes/onedark.css";
+@import "./themes/pywal.css";
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   /* -----------------------------------------------------
@@ -32,7 +32,7 @@ window#waybar {
 
 /* Modules */
 .modules-right {
-  background-color: alpha(@background, 0.6);
+  background-color: alpha(@background, 0);
 }
 
 /* -----------------------------------------------------
@@ -40,16 +40,17 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #workspaces {
-  background-color: alpha(@backgrounddark, 0.0);
+  background-color: alpha(@background, 0);
+  /* border: 1px solid alpha(@bordercolor, 0.2); */
   margin: 0px 2px 0px 0px;
   padding: 0px 2px 0px 2px;
   border-radius: 0px;
 }
 /* workspaces button applies to inactive */
 #workspaces button {
-  background-color: alpha(@workspacesbackground2, 0.0);
+  background-color: alpha(@workspacesbackground2, 0);
   color: alpha(@textcolor2, 0.5);
-  padding: 0px 5px;
+  padding: 0px 3px;
   margin: 0px 3px 0px 3px;
   border-radius: 0px;
   border: 0px;
@@ -57,8 +58,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background: alpha(@workspacesbackground1, 0.0);
-  color: alpha(@textcolor2, 1);
+  background: alpha(@workspacesbackground1, 0);
+  color: alpha(@textneutral, 0.9);
   border-radius: 0px;
   /* min-width: 20px; */
   transition: all 0.3s ease-in-out;
@@ -81,7 +82,7 @@ window#waybar {
 #clock {
   padding: 0px 5px 0px 5px;
   background-color: alpha(@workspacesbackground1, 0);
-  color: alpha(@textcolor2, 1);
+  color: alpha(@textneutral, 0.8);
   min-width: 50px;
   margin: 0px 4px 0px 10px;
   border-radius: 0px;
@@ -93,38 +94,36 @@ window#waybar {
 * ----------------------------------------------------- */
 
 #performance {
-  background-color: alpha(@background, 0.0);
+  background-color: alpha(@background, 0.5);
   margin: 0px 3px;
-  color: alpha(@textcolor2, 1);
+  color: alpha(@textneutral, 0.7);
+  border: 1px solid alpha(@bordercolor, 0.2);
   border-radius: 0px;
   padding: 0px 5px 0px 5px;
 }
 
-#cpu,
-#memory {
-  padding: 0px 10px 0px 5px;
-}
 /* -----------------------------------------------------
 * coreutils Group
 * use waybar - l debug to get classes from console
 * ----------------------------------------------------- */
 #coreutils {
   background-color: alpha(@background, 0);
-  color: @textcolor2;
+  color: alpha(@textneutral, 0.7);
   margin: 0px 3px;
   border-radius: 0px;
-  padding: 0px 5px 0px 5px;
+  padding: 0px 5px 0px 2px;
 }
 /* -----------------------------------------------------
 * Individual modules
 * 
 * ----------------------------------------------------- */
 
-#backlight {
-  padding: 0px 5px 0px 5px;
-}
+#cpu,
+#memory,
+#pulseaudio,
+#backlight,
 #battery {
-  padding: 0px 10px 0px 5px;
+  padding: 0px 2px 0px 2px;
 }
 #battery.charging,
 #battery.plugged {
@@ -148,8 +147,12 @@ window#waybar {
 }
 
 #tray {
+  background-color: alpha(@background, 0.5);
   color: @textcolor2;
-  padding: 0px 10px 0px 5px;
+  padding: 0px 2px 0px 5px;
+  margin: 0px 2px 0px 2px;
+  border: 1px solid alpha(@bordercolor, 0.2);
+  border-radius: 0px;
 }
 
 #tray > .passive {

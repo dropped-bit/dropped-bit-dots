@@ -9,6 +9,7 @@
 @define-color bordercolor @color7;
 @define-color textcolor1 @color0;
 @define-color textcolor2 @color7;
+@define-color textneutral #eeeeee;
 @define-color iconcolor @color14;
 @define-color highlight1 #E06C75;
 @define-color highlight2 #E5C07B;
