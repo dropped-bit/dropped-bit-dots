@@ -1,4 +1,5 @@
 # Edit this configuration file to define what should be installed on
+
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
@@ -68,16 +69,16 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
-	prime = {
-		# Make sure to use the correct Bus ID values for your system!
-		sync.enable = true;
-	 	intelBusId = "PCI:0:2:0";
-		nvidiaBusId = "PCI:1:0:0";
-		# offload = {
-			# enable = true;
-			# enableOffloadCmd = true;
-		# };
-	};
+    prime = {
+	# Make sure to use the correct Bus ID values for your system!
+	sync.enable = true; # turn off for option b offload
+	intelBusId = "PCI:0:2:0";
+	nvidiaBusId = "PCI:1:0:0";
+	# offload = {
+	# 	enable = true;
+	# 	enableOffloadCmd = true;
+	# };
+};
 
   };
   networking.hostName = "dropped-nix"; # Define your hostname.
@@ -109,25 +110,29 @@
   };
 
   # Enable the GNOME Desktop Environment.
-  services = {
-	xserver = {
-		# enable = true;
-		# displayManager = {
-		# 	gdm.enable = true;
-		#  	sddm.enable = true;
-		# };
-		# desktopManager = {
-		# 	gnome.enable = true;
-		#  	plasma5.enable = true;
-		# };
-		videoDrivers = ["nvidia"]; # THis is needed for wayland or xorg independent of gnome
-		# libinput.enable = true; 
-  # Enable touchpad support (enabled default in most desktopManager).
-	};  
- };
+  services.xserver.videoDrivers = ["nvidia"]; # THis is needed for wayland or xorg independent of gnome
+ security.polkit.enable = true;
+ systemd = {
+  user.services.polkit-gnome-authentication-agent-1 = {
+    description = "polkit-gnome-authentication-agent-1";
+    wantedBy = [ "graphical-session.target" ];
+    wants = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+    serviceConfig = {
+        Type = "simple";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        Restart = "on-failure";
+        RestartSec = 1;
+        TimeoutStopSec = 10;
+      };
+    };
+  };
+  services.gnome.gnome-keyring.enable = true;
   # Hyprland
 
-  xdg.portal.enable = true;
+  xdg.portal.enable = true; # probably not needed
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; # added for flatpak
+  xdg.portal.config.common.default = "gtk"; # added for flatpak
 
   programs.hyprland = {
 	enable = true;
@@ -183,7 +188,10 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.xserver.libinput.enable = true;
+
+  # Flatpak support
+  services.flatpak.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.holmes = {
@@ -212,6 +220,8 @@
   starship
   alacritty
   loupe # gnome 45 image viewer
+  font-manager
+  gparted
   # gnome stuff
   # gnome.gnome-tweaks gnomeExtensions.dash-to-dock gnomeExtensions.forge gnomeExtensions.blur-my-shell
   # gnomeExtensions.just-perfection
@@ -230,6 +240,7 @@
   pywal
   grim
   slurp
+  wl-clipboard
   cliphist
   wlogout
   mako
@@ -238,6 +249,8 @@
   networkmanagerapplet
   brightnessctl
   pamixer
+  jq # for json processing in scripts
+  # nwg-bar
   # COSMIC DE
   cosmic-edit
   # cosmic-comp
@@ -255,23 +268,16 @@
   python3
   fzf
   ripgrep
-  libgcc
-  gccgo13
-  gnumake
-  gnumake42
-  makeself
-  cmake
+  # libgcc
+  # gccgo13
+  # gnumake
+  # gnumake42
+  # makeself
+  # cmake
+  nodejs
+  unzip
   ];
   
-  # Plasma excluded packages
-  # environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-  # elisa
-  # gwenview
-  # okular
-  # oxygen
-  # khelpcenter
-  # plasma-browser-integration
-  # ];
   # nerdfonts
 
   fonts.packages = with pkgs; [
@@ -279,6 +285,14 @@
 	  noto-fonts
 	  font-awesome
 	  (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack"]; })
+  ];
+
+  fonts.fontDir.enable = true; # fix flatpak fonts
+
+  # Thunar plugins
+  programs.thunar.plugins = with pkgs.xfce; [
+  	thunar-archive-plugin
+	thunar-volman
   ];
 
 
@@ -319,7 +333,6 @@
 	programs.home-manager.enable = true;
   	nixpkgs.config.allowUnfree = true;
 	home.packages = with pkgs; [
-		htop
 	];	
 	home.stateVersion = "23.11";
 	gtk.enable = true;
@@ -335,6 +348,7 @@
 	gtk.gtk3.bookmarks = [
 		"file:///home/holmes/Documents"
 	];
+	programs.neovim = import ./neovim.nix pkgs;
   };
 }
 

@@ -1,12 +1,17 @@
 APP="waybar"
 
-PID=$(pgrep $APP)
+# PID=$(pgrep $APP)
+# check if hyprctl clients is running in full screen
 
-if [ $? -eq 1 ]
+# status_check
+
+result="$(hyprctl activewindow -j | jq -r ".fullscreen")"
+echo $result
+if [ "$(hyprctl activewindow -j | jq -r ".fullscreen")" = "true" ];
 then
-    echo "$APP is not running"
-    waybar
-else
-    echo "$APP is running"
+    echo "Full screen mode active, killing waybar"
     pkill -f waybar
+else
+    echo "Full screen mode not active, starting waybar"
+    waybar
 fi
