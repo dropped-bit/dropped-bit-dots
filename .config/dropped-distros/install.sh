@@ -32,6 +32,7 @@ systemctl enable NetworkManager
 # LOW PRIORITY ITEMS
 
 pacman -S loupe # gnome image viewer
+# XREMAP: please read xremap.md
 
 # DEVELOPMENT TOOLS
 #

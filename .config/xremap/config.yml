@@ -2,4 +2,18 @@ modmap:
   - name: Default
     remap: # Required
       # Replace a key with another
-      KEY_CAPSLOCK: KEY_LEFTMETA # Required
+      CapsLock: Alt_L # Required
+
+keymap:
+  - name: MacCMD
+    remap:
+      # Keybindings
+      ALT-a: C-a # select all
+      ALT-c: C-c # copy
+      ALT-v: C-v # paste
+      ALT-x: C-x # cut
+      ALT_L-b: C-b # bold
+      ALT_L-t: C-t # new tab
+      ALT_L-KEY_TAB: C-KEY_TAB # cycle through tabs
+      ALT_L-SHIFT_L-KEY_TAB: C-SHIFT_L-KEY_TAB # cycle-backwards through tabs
+      ALT_L-w: C-w # Close tab / window
