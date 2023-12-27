@@ -1,0 +1,16 @@
+/* -----------------------------------------------------
+ * Pywal
+ * ----------------------------------------------------- */
+@import "./mocha.css";
+@define-color backgroundlight @overlay1;
+@define-color backgrounddark @base;
+@define-color workspacesbackground1 @base;
+@define-color workspacesbackground2 @base;
+@define-color textcolor1 @text;
+@define-color textcolor2 @peach;
+@define-color textneutral #eeeeee;
+@define-color bordercolor @peach;
+@define-color iconcolor @mauve;
+@define-color highlight1 #E06C75;
+@define-color highlight2 #E5C07B;
+@define-color highlight3 #98C379;

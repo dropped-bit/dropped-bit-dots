@@ -20,6 +20,7 @@ datestr=%e.%m.%Y
 # Add an image as a background 
 # In my setup the current wallpaper (requires wallpaper scripts in /scripts)
 image=$HOME/.cache/current_wallpaper.png
+# image=$HOME/.cache/current_wallpaper.jpg
 
 # Fade in time
 fade-in=1

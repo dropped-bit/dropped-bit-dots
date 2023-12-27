@@ -1,5 +1,5 @@
 /**/
-@import "./themes/pywal.css";
+@import "./themes/themeparser.css";
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   /* -----------------------------------------------------
@@ -20,7 +20,7 @@
 }
 
 window#waybar {
-  background-color: alpha(@base, 0);
+  background-color: alpha(@backgrounddark, 0.4);
   /* color: #ffffff; */
   border-bottom: 0px solid #ffffff;
   color: @textcolor1;
@@ -32,7 +32,7 @@ window#waybar {
 
 /* Modules */
 .modules-right {
-  background-color: alpha(@background, 0);
+  background-color: alpha(@backgrounddark, 0);
 }
 
 /* -----------------------------------------------------
@@ -40,7 +40,7 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #workspaces {
-  background-color: alpha(@background, 0);
+  background-color: alpha(@backgrounddark, 0);
   /* border: 1px solid alpha(@bordercolor, 0.2); */
   margin: 0px 2px 0px 0px;
   padding: 0px 2px 0px 2px;
@@ -94,10 +94,10 @@ window#waybar {
 * ----------------------------------------------------- */
 
 #performance {
-  background-color: alpha(@background, 0.5);
+  background-color: alpha(@backgrounddark, 0.8);
   margin: 0px 3px;
-  color: alpha(@textneutral, 0.7);
-  border: 1px solid alpha(@bordercolor, 0.2);
+  color: alpha(@textcolor2, 0.7);
+  border: 1px solid alpha(@bordercolor, 0.5);
   border-radius: 0px;
   padding: 0px 5px 0px 5px;
 }
@@ -132,26 +132,25 @@ window#waybar {
 
 @keyframes blink {
   to {
-    background-color: #ffffff;
     color: @highlight2;
   }
 }
 
 #battery.critical:not(.charging) {
   color: @highlight1;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  /* animation-name: blink; */
+  /* animation-duration: 0.5s; */
+  /* animation-timing-function: linear; */
+  /* animation-iteration-count: infinite; */
+  /* animation-direction: alternate; */
 }
 
 #tray {
-  background-color: alpha(@background, 0.5);
-  color: @textcolor2;
-  padding: 0px 2px 0px 5px;
+  background-color: alpha(@backgrounddark, 0.8);
+  color: @iconcolor;
+  padding: 0px 5px 0px 5px;
   margin: 0px 2px 0px 2px;
-  border: 1px solid alpha(@bordercolor, 0.2);
+  border: 1px solid alpha(@bordercolor, 0.5);
   border-radius: 0px;
 }
 
@@ -161,7 +160,7 @@ window#waybar {
 
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
+  color: @highlight1;
 }
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
