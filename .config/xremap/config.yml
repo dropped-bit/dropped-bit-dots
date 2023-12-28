@@ -12,7 +12,7 @@ keymap:
       ALT-c: C-c # copy
       ALT-v: C-v # paste
       ALT-x: C-x # cut
-      ALT_L-b: C-b # bold
+      # ALT_L-b: C-b # bold
       ALT_L-t: C-t # new tab
       ALT_L-KEY_TAB: C-KEY_TAB # cycle through tabs
       ALT_L-SHIFT_L-KEY_TAB: C-SHIFT_L-KEY_TAB # cycle-backwards through tabs
