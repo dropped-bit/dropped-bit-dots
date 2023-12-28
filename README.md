@@ -11,4 +11,6 @@
 
 # SIMPLE ARCH w HYPRLAND CONFIG
 
-!image[alt text](https://github.com/dropped-bit/dropped-bit-dots/blob/main/.config/wallpapers/screenshots/desktop_1.png)
+![screenshot of desktop](https://github.com/dropped-bit/dropped-bit-dots/blob/main/.config/wallpapers/screenshots/desktop_1.png)
+
+Go to .config/dropped-bit-dots for basic install instructions.
