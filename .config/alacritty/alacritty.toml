@@ -1,4 +1,4 @@
-import = ["/home/holmes/.config/alacritty/themes/catppuccin-mocha.toml"]
+import = ["/home/holmes/.config/alacritty/themes/onedark.toml"]
 
 [env]
 TERM = "xterm-256color"
@@ -23,7 +23,7 @@ family = "Hack Nerd Font"
 style = "Regular"
 
 [window]
-opacity = 0.9
+opacity = 1
 
 [window.padding]
 x = 10

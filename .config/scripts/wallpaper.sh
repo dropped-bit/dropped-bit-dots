@@ -2,7 +2,7 @@
 # Should be improved alot!
 
 if [ $# -eq 0 ]; then
-    echo "Script requires wallpaper path as arguement '.wallpaper.sh $HOME/.config/wallpapers/catppuccin/1.png'"
+    echo "Script requires wallpaper path as arguement '.wallpaper.sh $HOME/.config/wallpapers/ubuntu/Bodacious_bovine_by_oklopfer_dark.png'"
     exit 1
 fi
 

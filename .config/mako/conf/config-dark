@@ -10,13 +10,13 @@ on-touch=dismiss
 #on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
 
 # STYLE OPTIONS
-font=Fira Sans Book Condensed 10
+font= Hack Nerd Font 10
 width=210
 height=60
-margin=2
+margin=10
 padding=5
 border-size=1
-border-radius=2
+border-radius=5
 icons=1
 max-icon-size=24
 icon-location=left
@@ -28,23 +28,30 @@ default-timeout=5000
 ignore-timeout=0
 max-visible=5
 layer=overlay
-anchor=bottom-right
+anchor=bottom-center
 
-background-color=#1e1e2ecc
-text-color=#d9e0ee
-border-color=#fab387
-progress-color=over #89b4fa
+background-color=#282c34ff
+# text-color=#d9e0ee
+# border-color=#fab387
+# progress-color=over #89b4fa
+# OneDark
+text-color=#eeeeee
+border-color=#73b9f1
+progress-color=over #56b6c2
 
 [urgency=low]
 default-timeout=2000
+text-color=#eeeeee
+border-color=#73b9f1
 
 [urgency=normal]
-border-color=#fab387
-text-color=#d9e0ee
 default-timeout=5000
+text-color=#eeeeee
+border-color=#73b9f1
 
 [urgency=high]
-text-color=#d9e0ee
+text-color=#eeeeee
+border-color=#73b9f1
 default-timeout=0
 
 [category=mpd]
