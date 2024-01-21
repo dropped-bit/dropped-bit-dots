@@ -27,7 +27,7 @@ pacman -S ttf-font-awesome ttf-hack-nerd ttf-fira-sans noto-fonts noto-fonts-emo
 pacman -S gnome-themes-extra
 yay -S catppuccin-gtk-theme-mocha 
 
-yay -S tela-circle-icon-theme-git volantes-cursors flat-remix-gtk
+yay -S tela-circle-icon-theme-git volantes-cursors gradience 
 
 # ENABLE SERVICES
 
