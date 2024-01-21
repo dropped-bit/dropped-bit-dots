@@ -4,7 +4,7 @@ yay -S envycontrol
 yay -S libva-vdpau-driver-vp9-git # might help with chrome launches https://wiki.archlinux.org/title/chromium
 
 # GENERAL PACAKGES PACMAN
-pacman -S hyprland make btop alacritty eza fish starship font-manager gparted polkit-gnome gnome-keyring imagemagick wofi python-pip python-pywal grim slurp wl-clipboard cliphist mako libnotify network-manager-applet brightnessctl jq python3 fzf ripgrep nodejs npm unzip swayidle flatpak fastfetch
+pacman -S hyprland make btop alacritty eza fish starship font-manager gparted polkit-gnome gnome-keyring libsecret imagemagick wofi python-pip python-pywal grim slurp wl-clipboard cliphist mako libnotify network-manager-applet brightnessctl jq python3 fzf ripgrep nodejs npm unzip swayidle flatpak fastfetch
 
 # THUNAR
 pacman -S thunar-volman tumbler gvfs

@@ -10,20 +10,20 @@ on-touch=dismiss
 #on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
 
 # STYLE OPTIONS
-font= Hack Nerd Font 10
+font= Hack Nerd Font Mono 10
 width=210
 height=60
 margin=10
 padding=5
 border-size=1
 border-radius=5
-icons=1
+icons=0
 max-icon-size=24
 icon-location=left
 markup=1
 actions=1
 history=1
-text-alignment=right
+text-alignment=center
 default-timeout=5000
 ignore-timeout=0
 max-visible=5
