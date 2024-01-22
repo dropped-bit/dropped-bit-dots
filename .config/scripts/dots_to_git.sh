@@ -10,6 +10,8 @@ config_array=(
     "$root_dir/fish/*"
     "$root_dir/holmes_iterm_profile.json"
     "$root_dir/hypr/*"
+    "$root_dir/scripts/*"
+    "$root_dir/wallpapers"
     )
 
 for i in "${config_array[@]}"
