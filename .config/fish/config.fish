@@ -7,7 +7,8 @@ starship init fish | source
 
 alias ls='exa --color=always --icons --long'
 alias ll='exa --color=always --icons --long --all'
-alias lt='exa --color=always --icons --long --all --tree --level=3'
+alias tree='exa --color=always --icons --long --all --tree --level=3'
+alias ff='fastfetch -c $HOME/.config/fastfetch/fastfetch.jsonc'
 alias nvconf="cd $HOME/.config/nvim && nvim"
 alias hyconf="cd $HOME/.config && nvim"
 alias python="python3"

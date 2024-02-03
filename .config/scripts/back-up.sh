@@ -1,6 +1,8 @@
 # back-up homefolder
 
-date="$(date +%F)"
-echo "Back-up generated on $date"
+setdate="$(date +%F)"
+echo "Back-up generated on $setdate"
 
-tar -czvf $HOME/backup_$date.tar.gz $HOME
+sleep 5
+
+tar --exclude=".local" --exclude=".cache" -czvf /tmp/backup_$setdate.tar.gz $HOME

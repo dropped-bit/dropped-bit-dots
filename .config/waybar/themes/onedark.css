@@ -1,0 +1,15 @@
+/* -----------------------------------------------------
+ * Pywal
+ * ----------------------------------------------------- */
+@define-color backgroundlight @overlay1;
+@define-color backgrounddark #282c34;
+@define-color workspacesbackground1 #73b8f1;
+@define-color workspacesbackground2 @base;
+@define-color textcolor1 #73b9f1;
+@define-color textcolor2 #abb2bf;
+@define-color textneutral #eeeeee;
+@define-color bordercolor #61afef;
+@define-color iconcolor #56b6c2;
+@define-color highlight1 #E06C75;
+@define-color highlight2 #E5C07B;
+@define-color highlight3 #98C379;
