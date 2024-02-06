@@ -17,4 +17,5 @@ alias grep='grep --color=auto'
 #git bare alias
 # alias config='/usr/bin/git --git-dir=$HOME/Builds/dropped-bit-dots/ --work-tree=$HOME'
 alias config='/usr/bin/git --git-dir=$HOME/Builds/dropped-bit-dots/ --work-tree=$HOME'
+set PATH $HOME/.cargo/bin $PATH
 set fish_greeting
