@@ -35,8 +35,11 @@ utils = [
 	gcc
 	ripgrep
 	fastfetch
-    lazygit
 ]
+
+# lazygit
+sudo dnf copr enable atim/lazygit -y
+sudo dnf install lazygit
 
 # Install Starhip
 curl -sS https://starship.rs/install.sh | sh
