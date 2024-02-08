@@ -7,12 +7,7 @@
  * ----------------------------------------------------- */
 
   font-family:
-    FiraSans,
-    Hack Nerd Font,
-    FontAwesome;
-  font-family:
-    FiraSans,
-    Hack Nerd Font,
+    JetBrainsMono Nerd Font,
     FontAwesome;
   font-size: 13px;
   border: none;
@@ -122,7 +117,7 @@ window#waybar {
 #backlight,
 #battery {
   padding: 0px 2px 0px 2px;
-  min-width: 45px;
+  min-width: 50px;
 }
 #cpu,
 #memory {
