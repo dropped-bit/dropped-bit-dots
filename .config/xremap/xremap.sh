@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-xremap /home/holmes/.config/xremap/config.yml 
+/home/holmes/.cargo/bin/xremap /home/holmes/.config/xremap/config.yml 

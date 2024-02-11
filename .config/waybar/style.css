@@ -161,6 +161,12 @@ window#waybar {
   -gtk-icon-effect: highlight;
   color: @highlight1;
 }
+
+#custom-linuxdistro {
+  padding: 0px 5px 0px 10px;
+  color: @textcolor2;
+  font-size: 16px;
+}
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
   margin-left: 2;

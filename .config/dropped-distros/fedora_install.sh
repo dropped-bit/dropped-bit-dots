@@ -36,6 +36,7 @@ utils=(
 	"ripgrep"
 	"fastfetch"
     "btop"
+    "cmake"
 )
 
 # lazygit
@@ -71,7 +72,6 @@ hyprland=(
     "brightnessctl"
     "network-manager-applet"
     "swayidle"
-    "swaylock"
     "lz4" # swww dependency
     "blueman"
     "pamixer"
@@ -86,3 +86,24 @@ git clone https://github.com/LGFae/swww.git $HOME/Builds/swww
 # xremap
 git clone https://github.com/k0kubun/xremap.git $HOME/Builds/xremap
 cargo install xremap --features wlroots
+
+# gtklock
+# Ready the wiki on the gitpage to know how to make sure it works with auth and fingerprint
+dnf install gcc meson pkgconf scdoc pam-devel wayland-devel gtk3-devel gtk-layer-shell-devel
+git clone https://github.com/jovanlanik/gtklock
+
+# Dev
+# You need to install docker using instructions: https://developer.fedoraproject.org/tools/docker/docker-installation.html
+dev=(
+    "dnf-plugins-core"
+    "docker-ce"
+    "docker-ce-cli"
+    "containerd.io"
+    "docker-compose"
+    )
+
+# This helps to make sure mysqlclient via pip install works
+python_dev_django=(
+    "python-devel"
+    "mysql-devel"
+    )
