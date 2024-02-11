@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 echo "swayidle is running"
-exec swayidle -w 150 'gtklock -i -d'\
-         timeout 300 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' \
-         before-sleep 'gtklock -i' \
-         lock 'gtklock -i' \
+exec swayidle -w timeout 150 'gtklock -di'\
+         timeout 180 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' \
+         before-sleep 'gtklock -di' \
+         lock 'gtklock -di' \
 	 timeout 120 'brightnessctl --save && brightnessctl s 5%' \
 	 resume 'brightnessctl --restore'
 #

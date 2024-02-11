@@ -111,7 +111,7 @@
     },
     "custom/linuxdistro": {
         "format": "󰣛",
-        "on-click": "$HOME/.config/wofi/wofi.sh",
+        "on-click": "$HOME/.config/wofi/powermenu/wofi_power.sh",
         "tooltip": false
     },
 
