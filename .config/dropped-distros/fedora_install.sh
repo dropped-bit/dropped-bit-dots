@@ -25,6 +25,8 @@ utils=(
 	"python"
 	"python-pip"
 	"eza"
+    "bat"
+    "zoxide"
 	"stow"
 	"fish"
 	"alacritty"
@@ -40,7 +42,10 @@ utils=(
 )
 
 battery=(
-    "tlp"
+    "tlp" # https://www.youtube.com/watch?v=GDdGK8Z_qzs&t=248s
+    "tlp-rdw"
+    "smartmontools"
+    "libva-utils"
     )
 
 # lazygit
