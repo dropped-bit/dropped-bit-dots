@@ -39,6 +39,10 @@ utils=(
     "cmake"
 )
 
+battery=(
+    "tlp"
+    )
+
 # lazygit
 sudo dnf copr enable atim/lazygit -y
 sudo dnf install lazygit
@@ -66,6 +70,7 @@ theming=(
 	"adw-gtk3-theme"
 )
 
+# USE THIS INSTEAD: https://copr.fedorainfracloud.org/coprs/solopasha/hyprland
 hyprland=(
     "hyprland"
     "waybar"

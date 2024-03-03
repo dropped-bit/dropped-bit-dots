@@ -18,6 +18,7 @@ keymap:
       SUPER-KEY_TAB: C-KEY_TAB # cycle through tabs
       SUPER-SHIFT_L-KEY_TAB: C-SHIFT_L-KEY_TAB # cycle-backwards through tabs
       SUPER-w: C-w # Close tab / window
+      SUPER-r: C-r # Reload tab
 # keymap:
 #   - name: MacCMD
 #     remap:
