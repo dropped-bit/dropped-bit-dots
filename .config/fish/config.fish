@@ -26,8 +26,9 @@ zoxide init fish | source
 # fzf
 # C-r searches command history
 # A-c cd via fzf
-alias fo='fzf --preview \'bat --style=numbers --color=always {}\' | xargs nvim'
+alias fo='find . | fzf --preview \'bat --style=numbers --color=always {}\' | xargs nvim'
 alias fcd='cd $(find . -type d -print | fzf)'
+alias ff='find . | fzf'
 
 # go to
 alias nvconf="cd $HOME/.config/nvim && nvim"
