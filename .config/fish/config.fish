@@ -21,7 +21,7 @@ alias ff='fastfetch -c $HOME/.config/fastfetch/fastfetch.jsonc'
 alias grep='rg'
 
 # zoxide
-zoxide init fish | source
+zoxide init fish --cmd cd | source
 
 # fzf
 # C-r searches command history
