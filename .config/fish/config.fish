@@ -15,7 +15,7 @@ alias tree='exa --color=always --icons --long --all --tree --level=3'
 alias cat='bat'
 
 # fast fetch
-alias ff='fastfetch -c $HOME/.config/fastfetch/fastfetch.jsonc'
+alias os='fastfetch -c $HOME/.config/fastfetch/fastfetch.jsonc'
 
 # ripgrep
 alias grep='rg'
@@ -38,6 +38,7 @@ alias dots="cd $HOME/dropped-bit-dots/.config/ && nvim"
 alias python="python3"
 alias cc='clear'
 alias grep='grep --color=auto'
+alias kde='$HOME/.config/scripts/launch_kde.sh'
 
 set PATH $HOME/.cargo/bin $PATH
 set fish_greeting

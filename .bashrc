@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+alias kde='$HOME/.config/scripts/launch_kde.sh'
+# alias grep='grep --color=auto'
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -15,3 +17,4 @@ if [ "$TERM" != "linux" ]; then
 fi
 # source "$HOME/.cargo/env"
 # . "$HOME/.cargo/env"
+
