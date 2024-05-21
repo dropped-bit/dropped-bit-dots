@@ -54,6 +54,7 @@ dev_packages=(
 	"python"
 	"python-devtools"
 	"lazygit"
+	"yazi"
 	)
 
 sudo pacman -S --needed "${dev_packages[@]}"

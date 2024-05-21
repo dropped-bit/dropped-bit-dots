@@ -97,3 +97,4 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Interactive fish
 # exec fish
+alias kde='$HOME/.config/scripts/launch_kde.sh'

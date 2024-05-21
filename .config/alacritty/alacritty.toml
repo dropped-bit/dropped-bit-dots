@@ -1,4 +1,4 @@
-import = ["/home/holmes/.config/alacritty/themes/onedark.toml"]
+import = ["/home/holmes/.config/alacritty/themes/catppuccin-macchiato.toml"]
 
 [env]
 TERM = "xterm-256color"
@@ -23,7 +23,7 @@ family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [window]
-opacity = 0.92
+opacity = 1
 
 [window.padding]
 x = 10
