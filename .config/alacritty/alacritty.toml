@@ -1,13 +1,22 @@
-# import = ["~/.config/alacritty/dracula.toml"]
-import = ["~/.config/alacritty/github_dark_default.toml"]
-# import = ["~/.config/alacritty/github_dark.toml"]
-# import = ["~/.config/alacritty/github_dark_dimmed.toml"]
+# CATPPUCCIN THEMES
+import = ["~/.config/alacritty/themes/catppuccin/catppuccin-macchiato.toml"]
+
+# DRACULA THEME
+# import = ["~/.config/alacritty/themes/dracula/dracula.toml"]
+
+# ROSE-PINE THEME
+# import = ["~/.config/alacritty/themes/rose-pine/rose-pine.toml"]
+
+# GITHUB THEMES
+# import = ["~/.config/alacritty/themes/github/github_dark_default.toml"]
+# import = ["~/.config/alacritty/themes/github/github_dark.toml"]
+# import = ["~/.config/alacritty/themes/github/github_dark_dimmed.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 12.0
+size = 16.0
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -26,9 +35,10 @@ family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [window]
-opacity = 0.94
-# opacity = 1
+opacity = 0.5
+blur = true
 decorations = "None"
+
 [window.padding]
 x = 10
 y = 2
