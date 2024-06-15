@@ -5,11 +5,15 @@
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
 
+# Do not load oh-my-posh if opening apple terminal:
+# if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+#   eval "$(oh-my-posh init zsh)"
+# fi
+
 # If you're using macOS, you'll want this enabled
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
-
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -91,6 +95,9 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Set Starship Promt
 eval "$(starship init zsh)"
+
+# Set Oh-My-Posh Prompt
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 # Source zsh.alias
 # source $HOME/.zsh_aliases
