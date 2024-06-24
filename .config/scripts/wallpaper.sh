@@ -7,17 +7,14 @@
 # fi
 
 # wallpaper=$1
-wallpaper="$HOME/.config/wallpapers/city/city_4.jpg"
-
-swww init
+wallpaper="$HOME/.config/wallpapers/stephan-raabe/nordwall3.jpg"
 
 if [ -f $wallpaper ]
 then
     echo "Wallpaper will now be set up"
     pkill waybar
-    wal -i $wallpaper -s 
+    # wal -i $wallpaper -s 
     swww img $wallpaper --transition-step 1 --transition-fps 60 --transition-type random
-    cp $wallpaper $HOME/.config/wallpapers/city/city_4.jpg
     waybar &>/dev/null & disown;
     echo "If you want to update grub image run 'sudo grub-mkconfig -o /boot/grub/grub.cfg'"
 else

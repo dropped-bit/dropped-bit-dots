@@ -1,5 +1,6 @@
 /**/
 @import "./themes/onedark.css";
+
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   /* -----------------------------------------------------
@@ -31,6 +32,23 @@ window#waybar {
 }
 
 /* -----------------------------------------------------
+ * Tooltips 
+ * ----------------------------------------------------- */
+
+tooltip {
+  background-color: alpha(@backgrounddark, 1);
+  margin: 0px 0px;
+  color: alpha(@textcolor2, 0.7);
+  border: 1px solid alpha(@bordercolor, 0.5);
+  border-radius: 5px;
+  padding: 0px 5px 0px 5px;
+}
+
+/* tooltip label { */
+/*   color: white; */
+/* } */
+
+/* -----------------------------------------------------
  * Workspaces 
  * ----------------------------------------------------- */
 
@@ -41,6 +59,7 @@ window#waybar {
   padding: 0px 2px 0px 2px;
   border-radius: 0px;
 }
+
 /* workspaces button applies to inactive */
 #workspaces button {
   background-color: alpha(@workspacesbackground2, 0);
@@ -108,6 +127,7 @@ window#waybar {
   border-radius: 5px;
   padding: 0px 5px 0px 2px;
 }
+
 /* -----------------------------------------------------
 * Individual modules
 * 
@@ -119,11 +139,13 @@ window#waybar {
   padding: 0px 2px 0px 2px;
   min-width: 50px;
 }
+
 #cpu,
 #memory {
   padding: 0px 2px 0px 2px;
   min-width: 20px;
 }
+
 #battery.charging,
 #battery.plugged {
   color: @highlight3;
@@ -153,11 +175,11 @@ window#waybar {
   border-radius: 5px;
 }
 
-#tray > .passive {
+#tray>.passive {
   -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
   -gtk-icon-effect: highlight;
   color: @highlight1;
 }
@@ -167,13 +189,21 @@ window#waybar {
   color: @textcolor2;
   font-size: 16px;
 }
+
+#custom-mediaplayer {
+  font-size: 16px;
+  border-radius: 2%;
+}
+
+@import "./waybar_mediaplayer_venv/src/style.css";
+
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
   margin-left: 2;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
   margin-right: 0;
 }
 

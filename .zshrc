@@ -26,6 +26,9 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+# Source Cargo
+export PATH="$PATH:$HOME/.cargo"
+
 # Add in Powerlevel10k
 # zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -105,3 +108,5 @@ eval "$(starship init zsh)"
 # Interactive fish
 # exec fish
 alias kde='$HOME/.config/scripts/launch_kde.sh'
+export GTK_THEME=adw-gtk3-dark:dark
+alias hyp='Hyprland'

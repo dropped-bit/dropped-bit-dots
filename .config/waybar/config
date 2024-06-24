@@ -11,7 +11,7 @@
     "margin-top": 0,
     // "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/linuxdistro", "group/workspaces-group"],
+    "modules-left": ["group/workspaces-group", "image", "custom/mediaplayer"],
     "modules-center": ["clock"],
     "modules-right": ["group/performance", "group/coreutils", "tray"],
     
@@ -74,8 +74,8 @@
         "format": "{icon} {capacity}%",
         "format-charging": "{icon} {capacity}%",
         "format-plugged": "{icon} {capacity}%",
-        "tooltip": false,
-        "tooltip-format": "{capacity}",
+        "tooltip": true,
+        "tooltip-format": "{time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": [" ", " ", " ", " ", " "]
@@ -142,7 +142,24 @@
 			"backlight",
 			"battery",
 		]
-	}
+	},
+    "image": {
+      "path": "/tmp/waybar-mediaplayer-art",
+      "size": 32,
+      "signal": 4,
+      "on-click": "feh --auto-zoom --borderless --title 'feh-float' /tmp/waybar-mediaplayer-art"
+    },
+
+    "custom/mediaplayer": {
+        "exec": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer monitor",
+        "return-type": "json",
+        "format": "{}",
+        "on-click": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer play-pause",
+        "on-scroll-up": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer next",
+        "on-scroll-down": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer previous",
+        "min-length": 20,
+        "max-length": 20
+    },
 }
 
 
