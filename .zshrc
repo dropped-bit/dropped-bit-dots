@@ -92,7 +92,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'exa --color=always --icons 
 
 
 # Shell integrations
-eval "$(fzf --zsh)"
+# eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 
