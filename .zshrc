@@ -28,6 +28,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # Source Cargo
 export PATH="$PATH:$HOME/.cargo"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # Add in Powerlevel10k
 # zinit ice depth=1; zinit light romkatv/powerlevel10k
