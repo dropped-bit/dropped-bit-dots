@@ -1,165 +1,37 @@
 {
-    // ========================================
-    // Bar Configuration
-    // ========================================
-    //
-
-    "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "height": 5, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "margin-top": 0,
-    // "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "modules-left": ["group/workspaces-group", "image", "custom/mediaplayer"],
-    "modules-center": ["clock"],
-    "modules-right": ["group/performance", "group/coreutils", "tray"],
+    // "layer": "top", // Waybar at top layer
     
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    
+    "height": 5, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
 
-    // ========================================
-    // Modules configuration
-    // ========================================
-
-
-    "hyprland/workspaces": {
-	"active-only": false,
-	"disable-scroll": true,
-	"all-outputs": false,
-	"warp-on-scroll": false,
-	"format": "{name}",
-	"format-icons": {
-		"active": "",
-		"urgent": "",
-		"focused": "",
-		"default": ""
-		},
-	"persistant_workspaces": {
-		"1": [],
-	 	"2": [],
-	 	"3" :[],
-	 	"4": []
-	 	}
-     	},
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 5
-    },
-    "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}",
-        "tooltip": false
-    },
-    "cpu": {
-        "format": " {usage}%",
-        "tooltip": false,
-    },
-    "memory": {
-        "format": " {}%",
-        "tooltip": false
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "tooltip": false,
-        "tooltip-format": "{percent}%",
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 20,
-            "critical": 10
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": "{icon} {capacity}%",
-        "format-plugged": "{icon} {capacity}%",
-        "tooltip": true,
-        "tooltip-format": "{time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "",
-        "format-ethernet": "{cidr} ",
-        "tooltip-format": "{signalStrength}%\n{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{format_source} {icon} {volume}%",
-        "format-bluetooth-muted": "{icon} {format_source}",
-        "format-muted": " ",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "alacritty && btop",
-        "tooltip": false
-    },
-    "custom/linuxdistro": {
-        "format": "󰣛",
-        "on-click": "$HOME/.config/wofi/powermenu/wofi_power.sh",
-        "tooltip": false
-    },
-
-    // ========================================
-    // Modules configuration
-        "on-click": "~/dotfiles/scripts/launchvm.sh",
-    // ========================================
-    // groups workspaces
-    "group/workspaces-group": {
-        "orientation": "horizontal",
-        "modules": [
-            "hyprland/workspaces",
-        ]
-        },
-	// Groups Performance
-
-	"group/performance": {
-		"orientation": "horizontal",
-		"modules": [
-            "cpu",
-            "memory"
-		],
-	},
-	"group/coreutils": {
-		"orientation": "horizontal",
-		"modules": [
-            "pulseaudio",
-			"backlight",
-			"battery",
-		]
-	},
-    "image": {
-      "path": "/tmp/waybar-mediaplayer-art",
-      "size": 32,
-      "signal": 4,
-      "on-click": "feh --auto-zoom --borderless --title 'feh-float' /tmp/waybar-mediaplayer-art"
-    },
-
-    "custom/mediaplayer": {
-        "exec": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer monitor",
-        "return-type": "json",
-        "format": "{}",
-        "on-click": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer play-pause",
-        "on-scroll-up": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer next",
-        "on-scroll-down": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer previous",
-        "min-length": 20,
-        "max-length": 20
-    },
+    // Load Modules
+    "include": [
+        "~/.config/ml4w/settings/waybar-quicklinks.json",
+        "~/.config/waybar/modules.json"
+    ],    
+    "modules-left": [
+        "custom/appmenu",
+        "group/quicklinks",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "mpd", 
+        "pulseaudio", 
+        "network", 
+        "cpu", 
+        "memory", 
+        "keyboard-state", 
+        "battery", 
+        "clock", 
+        "tray",
+        "custom/exit"
+    ]
 }
-
-
