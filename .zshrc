@@ -29,6 +29,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Source Cargo
 export PATH="$PATH:$HOME/.cargo"
 export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Add in Powerlevel10k
 # zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -59,9 +60,9 @@ zinit cdreplay -q
 # Aliases
 alias vim='nvim'
 alias c='clear'
-alias ls='exa --color=always --icons --long'
-alias ll='exa --color=always --icons --long --all'
-alias tree='exa --color=always --icons --long --all --tree --level=3'
+alias ls='eza --color=always --icons --long'
+alias ll='eza --color=always --icons --long --all'
+alias tree='eza --color=always --icons --long --all --tree --level=3'
 alias cat='bat'
 alias os='fastfetch -c $HOME/.config/fastfetch/fastfetch.jsonc'
 
