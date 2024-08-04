@@ -16,7 +16,7 @@ configuration {
 }
 
 /* ---- Load pywal colors ---- */
-@import "./colors/onedark.rasi"
+@import "./colors/catppuccin-macchiato.rasi"
 
 /* ---- Global Properties ---- */
 * {

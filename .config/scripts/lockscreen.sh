@@ -1,3 +1,4 @@
 #!/bin/env bash
 
-swaylock -C $HOME/.config/swaylock/config
+# swaylock -C $HOME/.config/swaylock/config
+hyprlock
