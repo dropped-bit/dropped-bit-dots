@@ -30,7 +30,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 export PATH="$PATH:$HOME/.cargo"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/bin"
-
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 # Add in Powerlevel10k
 # zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -112,3 +112,6 @@ eval "$(starship init zsh)"
 alias kde='$HOME/.config/scripts/launch_kde.sh'
 export GTK_THEME=adw-gtk3-dark:dark
 alias hyp='Hyprland'
+
+# ENV for Nix Config
+export NIX_CONF_DIR=/Users/holmes_a9/.config/nix
