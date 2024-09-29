@@ -45,5 +45,9 @@ install_apps() {
 check_brew
 install_apps
 
+# exceptions
+
+brew install --cask nikitabobko/tap/aerospace
+
 echo "All applications are installed."
 
