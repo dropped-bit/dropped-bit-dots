@@ -1,13 +1,11 @@
-@import "./themes/catppuccin-macchiato.css";
-
-* {
+@import "./themes/catppuccin-macchiato.css"; * {
   font-family: JetBrainsMono Nerd Font;
   font-size: 14px;
   min-height: 0;
 }
 
 #waybar {
-  background: alpha(@overlay1, 0.4);
+  background: alpha(@overlay1, 0.01);
   /* background-image: linear-gradient( */
   /*   alpha(@overlay1, 0.1), */
   /*   alpha(@overlay1, 0.2) */
@@ -44,7 +42,16 @@
 #clock {
   margin: 0px 12px 0px 6px;
 }
-#window,
+#window {
+  background-color: @base; 
+  padding: 0px 6px 0px 6px;
+  margin: 5px 6px 5px 10px;
+  border-radius: 6px;
+  min-width: 100px;
+}
+window#waybar.empty #window {
+  background-color: transparent;
+}
 #battery,
 #custom-music,
 #backlight,
