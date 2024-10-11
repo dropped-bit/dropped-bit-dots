@@ -1,4 +1,4 @@
-@import "./themes/catppuccin-macchiato.css"; * {
+@import "./themes/catppuccin-frappe.css"; * {
   font-family: JetBrainsMono Nerd Font;
   font-size: 14px;
   min-height: 0;
@@ -52,6 +52,7 @@
 window#waybar.empty #window {
   background-color: transparent;
 }
+#custom-controlcenter,
 #battery,
 #custom-music,
 #backlight,

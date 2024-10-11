@@ -14,4 +14,9 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "./colors/catppuccin-macchiato.rasi"
+window {
+    width: 70px;
+    height: 70%;
+}
+
+@theme "./colors/catppuccin-frappe.rasi"
