@@ -11,7 +11,6 @@ handle() {
       for i in {1..6}; do
 	  hyprctl dispatch moveworkspacetomonitor "$i" DP-4 >> $log_file
       done
-      hyprctl renameworkspace 7 7
       ;;
     monitorremoved*)
       pkill ags
@@ -20,7 +19,6 @@ handle() {
       for i in {1..6}; do
 	  hyprctl dispatch moveworkspacetomonitor "$i" eDP-1 >> $log_file
       done
-      hyprctl renameworkspace 7 int-monitor
       ;;
   esac
 }
