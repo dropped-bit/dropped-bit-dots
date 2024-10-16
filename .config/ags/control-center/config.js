@@ -85,7 +85,43 @@ const ramProgressBox = Widget.Box({
     ]
 })
 
-/* labels */
+// Battery
+const battery = await Service.import('battery')
+
+const battery_time = battery.bind('time-remaining').as(value => {
+    if (value !== null && value >= 0) {
+        const hours = Math.floor(value / 3600); // Calculate hours
+        const minutes = Math.floor((value % 3600) / 60); // Calculate remaining minutes
+        return `BAT: ${hours}h ${minutes}m`; // Return formatted string
+    } else {
+        return 'Calculating...'; // In case value is not available yet
+    }
+});
+
+child: Widget.Label({
+    label: battery_time
+})
+//
+// const battery_time = battery.bind('time-remaining').as(value => value.toString())
+const batteryProgress = Widget.CircularProgress({
+    child: Widget.Label({
+        label: battery.bind('percent').as(value => value.toString() + "%") 
+    }),
+    visible: battery.bind('available'),
+    value: battery.bind('percent').as(p => p > 0 ? p / 100 : 0),
+    className: "circularprocess",
+})
+const batteryProgressBox = Widget.Box({
+    vertical: true,
+    children: [
+        batteryProgress,
+        Widget.Label({
+            className: "circularlabel",
+            label: battery_time,
+        })
+    ]
+})
+// labels
 
 const os = Widget.Label ({
     className: "os",
@@ -140,19 +176,19 @@ const Sidebar = Widget.Box({
     vertical: true,
     className: "sidebar",
     children: [
-        Widget.Box({
-            className: "group",
-            homogeneous: false,
-            children:[
-                os_greeting,
-                greeting_greeting]
-        }),
+        // Widget.Box({
+        //     className: "group",
+        //     homogeneous: false,
+        //     children:[
+        //         os_greeting,
+        //         greeting_greeting]
+        // }),
         Widget.Box({
             className: "group",
             vertical: true,
             homogeneous: true,
             children:[
-                BatteryLabel(),
+                // BatteryLabel(),
                 Volume()
             ]
         }),
@@ -160,6 +196,11 @@ const Sidebar = Widget.Box({
             className: "group",
             homogeneous: true,
             children:[cpuProgressBox, ramProgressBox]
+        }),
+        Widget.Box({
+            className: "group",
+            homogeneous: true,
+            children:[batteryProgressBox]
         }),
     ]
 })

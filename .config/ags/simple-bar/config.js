@@ -32,7 +32,7 @@ function Workspaces() {
 function ClientTitle() {
     return Widget.Label({
         class_name: "client-title",
-        label: hyprland.active.client.bind("title"),
+        label: hyprland.active.client.bind("class"),
     })
 }
 
@@ -143,8 +143,8 @@ export function BatteryLabel() {
 
 function SysTray() {
     const items = systemtray.bind("items")
-        .as(items => items.map(item => Widget.Button({
-        child: Widget.Icon({ icon: item.bind("icon"), css: "margin: 0px 2px 0px 2px" }),
+        .as(items => items.map(item => Widget.Button({css: "margin: 4px 0px 4px 0px",
+        child: Widget.Icon({ icon: item.bind("icon"), css: "padding: 0px 0px 0px 0px" }),
             on_primary_click: (_, event) => item.activate(event),
             on_secondary_click: (_, event) => item.openMenu(event),
             tooltip_markup: item.bind("tooltip_markup"),
@@ -166,6 +166,11 @@ const controlCenterButton = Widget.Button({
     }
 })
 
+const battery_icon = Widget.Icon({
+    // className: "controlcenterbutton",
+    icon: battery.bind('icon-name'),
+})
+
 // layout of the bar
 function Left() {
     return Widget.Box({
@@ -182,7 +187,7 @@ function Center() {
         spacing: 8,
         children: [
             Media(),
-            Notification(),
+            // Notification(),
         ],
     })
 }
@@ -195,6 +200,7 @@ function Right() {
             SysTray(),
             // Volume(),
             // BatteryLabel(),
+            battery_icon,
             controlCenterButton,
             Clock(),
         ],

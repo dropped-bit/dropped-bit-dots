@@ -27,7 +27,7 @@
 .sidebar {
     background: @base;
     /* padding: 100px; */
-    /* margin: 10 4px 0px 0px; */
+    margin: 10 4px 0px 0px;
     border-radius: 12px;
     font-weight: bold;
     border: 1px solid @mauve;
@@ -151,7 +151,7 @@ icon {
 }
 
 .clock {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 10px 0px 4px;
 }
 
 
