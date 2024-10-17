@@ -12,8 +12,8 @@ source ./arch-scripts/yay.sh
 
 # Function to copy system files
 copy_sys_files() {
-  local source="$1"
-  local target="$2"
+                local source="$1"
+                local target="$2"
   
   if [ ! -f "$target" ]; then
     echo "$target not found, copying file now..."
