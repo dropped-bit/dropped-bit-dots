@@ -49,6 +49,7 @@ base_packages=(
     "lazygit"
     "stow"
     "tmux"
+    "zellij"
     "starship"
     "sof-firmware"
     "wireplumber"
