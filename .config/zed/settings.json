@@ -41,6 +41,9 @@
     "light": "One Light",
     "dark": "Catppuccin Frappé - No Italics"
   },
+  "experimental.theme_overrides": {
+    // "editor.background": "#FFFFFF00"
+  },
   "terminal": {
     "font_family": "JetBrainsMono Nerd Font",
     "blinking": "off"
