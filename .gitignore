@@ -1,3 +1,7 @@
 .DS_Store
 .config/.DS_Store
 .config/tmux/plugins/*
+.config/zed/embeddings/*
+.config/zed/prompts/*
+.config/zed/embeddings/semantic-index-db.0.mdb
+.config/zed/prompts/prompts-library-db.0.mdb
