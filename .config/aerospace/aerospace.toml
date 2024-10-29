@@ -50,12 +50,12 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 0
-inner.vertical =   0
-outer.left =       0
-outer.bottom =     0
-outer.top =        0
-outer.right =      0
+inner.horizontal = 6
+inner.vertical =   6
+outer.left =       2
+outer.bottom =     2
+outer.top =        2
+outer.right =      2
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -114,9 +114,10 @@ cmd-shift-alt-ctrl-3 = 'workspace 3'
 cmd-shift-alt-ctrl-4 = 'workspace 4'
 cmd-shift-alt-ctrl-5 = 'workspace 5'
 cmd-shift-alt-ctrl-6 = 'workspace 6'
-# cmd-shift-alt-ctrl-7 = 'workspace 7'
-# cmd-shift-alt-ctrl-8 = 'workspace 8'
-# cmd-shift-alt-ctrl-9 = 'workspace 9'
+cmd-shift-alt-ctrl-7 = 'workspace 7'
+cmd-shift-alt-ctrl-8 = 'workspace 8'
+cmd-shift-alt-ctrl-9 = 'workspace 9'
+cmd-shift-alt-ctrl-0 = 'workspace 10'
 # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
 # alt-b = 'workspace B'
 # alt-c = 'workspace C'
@@ -147,9 +148,10 @@ alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-5 = 'move-node-to-workspace 5'
 alt-shift-6 = 'move-node-to-workspace 6'
-# alt-shift-7 = 'move-node-to-workspace 7'
-# alt-shift-8 = 'move-node-to-workspace 8'
-# alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-0 = 'move-node-to-workspace 10'
 # alt-shift-a = 'move-node-to-workspace A'
 # alt-shift-b = 'move-node-to-workspace B'
 # alt-shift-c = 'move-node-to-workspace C'
@@ -180,6 +182,8 @@ cmd-ctrl-shift-alt-f = 'layout floating tiling'
 alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+[workspace-to-monitor-force-assignment]
+10 = 'secondary'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-s = 'mode service'
