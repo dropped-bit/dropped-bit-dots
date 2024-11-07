@@ -71,6 +71,7 @@ base_packages=(
     "figlet" # app used for making larger letters out of ordinary text
     "flatpak"
     "libnotify" # required for notification daemon
+    "ttf-jetbrains-mono" # kitty font
     )
 
 hypr=(
@@ -100,10 +101,15 @@ hypr=(
   "libadwaita"
   "brightnessctl"
   "swaync" # notification center
+  "gnome-bluetooth-3.0" # for ags bar
+  "libgtop" # required for resource monitoring modules
+  "dart-sass" # compiler for sass/scss
+  "power-profiles-daemon"
 )
 
 yay_hypr=(
   "hyprshot"
+  "aylurs-gtk-shell"
   )
 
 # Flatpaks

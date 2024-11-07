@@ -116,3 +116,10 @@ alias hyp='Hyprland'
 
 # ENV for Nix Config
 export NIX_CONF_DIR=/Users/holmes_a9/.config/nix
+
+# bun completions
+[ -s "/home/holmes/.bun/_bun" ] && source "/home/holmes/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
