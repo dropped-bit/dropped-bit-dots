@@ -100,7 +100,7 @@ hypr=(
   "nwg-look" # set gtk themes
   "libadwaita"
   "brightnessctl"
-  "swaync" # notification center
+  # "swaync" # notification center
   "gnome-bluetooth-3.0" # for ags bar
   "libgtop" # required for resource monitoring modules
   "dart-sass" # compiler for sass/scss
