@@ -12,15 +12,15 @@
 
 # If you're using macOS, you'll want this enabled
 if [[ -f "/opt/homebrew/bin/brew" ]] then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
-   mkdir -p "$(dirname $ZINIT_HOME)"
-   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+    mkdir -p "$(dirname $ZINIT_HOME)"
+    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
 # Source/Load zinit
@@ -64,7 +64,7 @@ alias c='clear'
 alias ls='eza --color=always --icons --long'
 alias ll='eza --color=always --icons --long --all'
 alias tree='eza --color=always --icons --long --all --tree --level=3'
-alias cat='bat'
+# alias cat='bat'
 alias os='fastfetch -c $HOME/.config/fastfetch/fastfetch.jsonc'
 
 # Keybindings
@@ -123,3 +123,8 @@ export NIX_CONF_DIR=/Users/holmes_a9/.config/nix
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# go
+export "PATH=$PATH:$HOME/.local/opt/go/bin"
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
