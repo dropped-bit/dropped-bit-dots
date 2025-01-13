@@ -1,0 +1,11 @@
+[Unit]
+Description=Kanata service for remapping keys
+
+[Service]
+User=root
+ExecStart=kanata -c /home/holmes/.config/kanata/kanata.kbd
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

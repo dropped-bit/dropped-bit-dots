@@ -32,6 +32,7 @@ copy_sys_files ./sys-files/etc/vconsole.conf /etc/vconsole.conf
 copy_sys_files ./sys-files/etc/locale.gen /etc/locale.gen
 copy_sys_files ./sys-files/etc/locale.conf /etc/locale.conf
 copy_sys_files ./sys-files/etc/systemd/timesyncd.conf /etc/systemd/timesyncd.conf
+copy_sys_files ./sys-files/etc/systemd/system/kanata.service /etc/systemd/system/kanata.service
 # copy_sys_files ./sys-files/etc/systemd/system/external_monitor.service /etc/systemd/system/external_monitor.service
 # copy_sys_files ./sys-files/etc/udev/rules.d/99-monitor-hotplug.rules /etc/udev/rules.d/99-monitor-hotplug.rules
 
@@ -110,6 +111,7 @@ hypr=(
 yay_hypr=(
   "hyprshot"
   "aylurs-gtk-shell"
+  "kanata" # keyboard modifier
   )
 
 # Flatpaks

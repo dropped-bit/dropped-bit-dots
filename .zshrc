@@ -66,6 +66,7 @@ alias ll='eza --color=always --icons --long --all'
 alias tree='eza --color=always --icons --long --all --tree --level=3'
 # alias cat='bat'
 alias os='fastfetch -c $HOME/.config/fastfetch/fastfetch.jsonc'
+alias nvex='NVIM_APPNAME=nvex nvim'
 
 # Keybindings
 bindkey -e
