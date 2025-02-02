@@ -7,3 +7,4 @@
 .config/zed/embeddings/semantic-index-db.0.mdb
 .config/zed/prompts/prompts-library-db.0.mdb
 .config/btop/
+.config/nvex/lazy-lock.json
