@@ -5,7 +5,7 @@
 }
 
 #waybar {
-  background: alpha(@overlay1, 0.01);
+  background: alpha(@base, 0.8);
   /* background-image: linear-gradient( */
   /*   alpha(@overlay1, 0.1), */
   /*   alpha(@overlay1, 0.2) */
@@ -52,6 +52,7 @@
 window#waybar.empty #window {
   background-color: transparent;
 }
+
 #custom-controlcenter,
 #battery,
 #custom-music,
@@ -67,6 +68,14 @@ window#waybar.empty #window {
 }
 #tray {
   margin: 0px 20px;
+}
+
+#taskbar {
+    padding: 0px 5px;
+}
+
+#taskbar button {
+    padding: 0px 8px;
 }
 
 #battery.charging {
