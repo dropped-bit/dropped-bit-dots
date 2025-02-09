@@ -1,6 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    event = "VeryLazy",
     dependencies = {
       "folke/lazydev.nvim",
       ft = { "lua", "python" }, -- only load on lua files
@@ -98,6 +99,19 @@ return {
               end,
             })
           end
+
+          -- Set border for hover popup
+          vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+            vim.lsp.handlers.hover,
+            { border = "single" }
+          )
+
+          -- Set border for signature help
+          vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+            vim.lsp.handlers.signature_help,
+            { border = "single" }
+          )
+
 
           -- The following code creates a keymap to toggle inlay hints in your
           -- code, if the language server you are using supports them

@@ -32,3 +32,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank()
   end,
 })
+
+-- border on diagnostics
+vim.diagnostic.config({
+  float = {
+    border = "rounded",
+  },
+})
