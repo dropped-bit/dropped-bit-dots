@@ -8,3 +8,6 @@
 .config/zed/prompts/prompts-library-db.0.mdb
 .config/btop/
 .config/nvex/lazy-lock.json
+.config/nvim/.gitignore
+.config/nvim/lazy-lock.json
+.config/nvim/lazyvim.json
