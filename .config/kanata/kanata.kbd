@@ -18,7 +18,8 @@
 )
 
 (defsrc
-    a s d f ; l k j caps
+;;    a s d f ; l k j caps
+  caps
 )
 
 (defvar
@@ -27,19 +28,19 @@
 )
 
 (defalias
-   a-mod (tap-hold $tap-time $hold-time a lmet)
-   s-mod (tap-hold $tap-time $hold-time s lalt)
-   d-mod (tap-hold $tap-time $hold-time d lsft)
-   f-mod (tap-hold $tap-time $hold-time f lctl)
-   ;-mod (tap-hold $tap-time $hold-time ; rmet)
-   l-mod (tap-hold $tap-time $hold-time l ralt)
-   k-mod (tap-hold $tap-time $hold-time k rsft)
-   j-mod (tap-hold $tap-time $hold-time j rctl)
-   escctrl (tap-hold $tap-time $hold-time esc lctl)
+;;   a-mod (tap-hold $tap-time $hold-time a lmet)
+;;   s-mod (tap-hold $tap-time $hold-time s lalt)
+;;   d-mod (tap-hold $tap-time $hold-time d lsft)
+;;   f-mod (tap-hold $tap-time $hold-time f lctl)
+;;   ;-mod (tap-hold $tap-time $hold-time ; rmet)
+;;   l-mod (tap-hold $tap-time $hold-time l ralt)
+;;   k-mod (tap-hold $tap-time $hold-time k rsft)
+;;   j-mod (tap-hold $tap-time $hold-time j rctl)
+   escctrl (tap-hold $tap-time $hold-time esc lmet)
 )
 
 (deflayer base
-    @a-mod @s-mod @d-mod @f-mod
-    @;-mod @l-mod @k-mod @j-mod
+;;    @a-mod @s-mod @d-mod @f-mod
+;;    @;-mod @l-mod @k-mod @j-mod
     @escctrl
 )
