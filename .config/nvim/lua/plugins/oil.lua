@@ -9,7 +9,7 @@ return {
   -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
   lazy = false,
   config = function()
-    vim.keymap.set("n", "<leader>fe", "<cmd>Oil<CR>", { desc = "[F]ile [E]xplorer" })
+    vim.keymap.set("n", "<leader>fo", "<cmd>Oil<CR>", { desc = "[F]ile [E]xplorer" })
     require("oil").setup({})
   end,
 }
