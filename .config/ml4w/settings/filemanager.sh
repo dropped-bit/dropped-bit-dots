@@ -1,0 +1,1 @@
+cosmic-files --new-window

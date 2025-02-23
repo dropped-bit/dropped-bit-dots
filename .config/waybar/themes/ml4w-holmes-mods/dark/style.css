@@ -1,0 +1,16 @@
+/* -----------------------------------------------------
+ * Import Pywal colors
+ * ----------------------------------------------------- */
+@import './catppuccin-frappe.css';
+
+@define-color backgroundlight @base;
+@define-color backgrounddark @base;
+@define-color workspacesbackground1 transparent;
+@define-color workspacesbackground2 @surface0;
+@define-color bordercolor @base;
+@define-color textcolor1 @text;
+@define-color textcolor2 @text;
+@define-color textcolor3 @text;
+@define-color iconcolor @surface2;
+
+@import '../style.css';
