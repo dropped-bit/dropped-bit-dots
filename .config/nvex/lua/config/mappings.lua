@@ -14,6 +14,9 @@ vim.keymap.set("v", "<", "<gv", { desc = "Indent right", noremap = true, silent 
 vim.keymap.set("v", ">", ">gv", { desc = "Indent left", noremap = true, silent = true })
 
 -- source on the fly
-vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
+-- vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<space>x", ":.lua<CR>")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
+
+-- better yanking ;)
+vim.keymap.set("v", "<leader>yp", ":'<,'>y+<CR>", { desc = "[Y]ank to [P]lus" })
