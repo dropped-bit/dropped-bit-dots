@@ -17,17 +17,36 @@ return {
     -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
     -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
     -- See the full "keymap" documentation for information on defining your own keymap.
-    keymap = { preset = 'default' },
+    keymap = {
+      preset = 'none',
+      ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+      ['<C-e>'] = { 'hide' },
+      ['<C-y>'] = { 'select_and_accept' },
+
+      ['<Up>'] = { 'select_prev', 'fallback' },
+      ['<Down>'] = { 'select_next', 'fallback' },
+      ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
+      ['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
+
+      ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
+      ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
+
+      ['<Tab>'] = { 'snippet_forward', 'fallback' },
+      ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
+
+      ['<C-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
+
+    },
 
     -- Blink supports signature help, automatically triggered when typing trigger characters, defined by the LSP, such as ( for lua. The menu will be updated when pressing a retrigger character, such as ,. Due to it being experimental, this feature is opt-in.
     signature = {
       enabled = true,
-      window = { border = "rounded" }
+      window = { border = "none" }
     },
 
     completion = {
       menu = {
-        border = "rounded",
+        border = "none",
         draw = {
           gap = 1,
           treesitter = { "lsp" },
@@ -37,7 +56,7 @@ return {
       documentation = {
         auto_show = false,
         auto_show_delay_ms = 500,
-        window = { border = "rounded" },
+        window = { border = "none" },
       }
     },
     appearance = {
@@ -62,5 +81,11 @@ return {
       },
     },
   },
-  opts_extend = { "sources.default" }
+  opts_extend = { "sources.default" },
+  config = function(_, opts)
+    require("blink.cmp").setup(opts)
+    -- Highlight override for documentation background
+    vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "#292c3c" })
+    vim.api.nvim_set_hl(0, "BlinkDocumentationBorder", { bg = "#292c3c" })
+  end,
 }

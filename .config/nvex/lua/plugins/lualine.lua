@@ -28,7 +28,7 @@ return {
     local custom_auto = require("lualine.themes.auto")
     -- custom_auto.normal.a.bg = '#112233'
     -- custom_auto.normal.b.bg = '#112233'
-    custom_auto.normal.c.bg = '#292c3c'
+    custom_auto.normal.c.bg = '#292c3c' -- only add this using frappe
 
     lualine.setup({
 
@@ -73,14 +73,17 @@ return {
             },
             padding = { left = 1, right = 0 },
           },
-          {
-            symbols and symbols.get,
-            cond = function()
-              return vim.b.trouble_lualine ~= false and symbols.has()
-            end,
-            padding = { left = 1, right = 1 },
-            color = { bg = "#81c8be" },
-          },
+          -- {
+          --   "buffers",
+          -- },
+          -- {
+          --   symbols and symbols.get,
+          --   cond = function()
+          --     return vim.b.trouble_lualine ~= false and symbols.has()
+          --   end,
+          --   padding = { left = 1, right = 1 },
+          --   color = { bg = "#81c8be" },
+          -- },
           "diagnostics",
           -- {
           --   "buffers",
@@ -95,6 +98,26 @@ return {
         },
 
         lualine_x = {
+          -- add status from noice (especially for showing macro recording in statusline)
+          -- {
+          --   require("noice").api.status.message.get_hl,
+          --   cond = require("noice").api.status.message.has,
+          -- },
+          -- {
+          --   require("noice").api.status.command.get,
+          --   cond = require("noice").api.status.command.has,
+          --   color = { fg = "#ff9e64" },
+          -- },
+          {
+            require("noice").api.status.mode.get,
+            cond = require("noice").api.status.mode.has,
+            color = { fg = "#ff9e64" },
+          },
+          {
+            require("noice").api.status.search.get,
+            cond = require("noice").api.status.search.has,
+            color = { fg = "#ff9e64" },
+          },
           "diff",
           {
             "lsp_status",

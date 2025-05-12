@@ -39,3 +39,9 @@ vim.diagnostic.config({
     border = "rounded",
   },
 })
+
+-- border on hover window
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover,
+  { border = "single" }
+)
