@@ -73,6 +73,12 @@ base_packages=(
     "flatpak"
     "libnotify" # required for notification daemon
     "ttf-jetbrains-mono" # kitty font
+    "ghostty"
+    "terminus-font"
+    "tlp" # battery stuff
+    "noto-fonts" # google fonts and emojis
+    "nvidia"
+    # "power-profiles-daemon" # conflicts wtih tlp
     )
 
 hypr=(
@@ -86,31 +92,30 @@ hypr=(
   "cliphist" # clipboard manager
   "grim" # screenshots
   "slurp" # screenshots
-  "network-manager-applet"
+  # "network-manager-applet"
   "gvfs"
-  "blueman" # bluethtooth
-  "bluez" # bluetooth
-  "polkit-gnome" # polkit
+  # "blueman" # bluethtooth
+  # "bluez" # bluetooth
+  # "polkit-gnome" # polkit
   "font-manager"
   "playerctl" # volume etc
-  "thunar" # file manager
-  "kitty" # terminal
-  "firefox" # browser
+  # "thunar" # file manager
+  # "kitty" # terminal
+  # "firefox" # browser
   "waybar" # bar
   "rofi-wayland"
-  "nwg-look" # set gtk themes
-  "libadwaita"
+  # "nwg-look" # set gtk themes
+  # "libadwaita"
   "brightnessctl"
   # "swaync" # notification center
-  "gnome-bluetooth-3.0" # for ags bar
-  "libgtop" # required for resource monitoring modules
-  "dart-sass" # compiler for sass/scss
-  "power-profiles-daemon"
+  # "gnome-bluetooth-3.0" # for ags bar
+  # "libgtop" # required for resource monitoring modules
+  # "dart-sass" # compiler for sass/scss
 )
 
 yay_hypr=(
   "hyprshot"
-  "aylurs-gtk-shell"
+  # "aylurs-gtk-shell"
   "kanata" # keyboard modifier
   )
 
@@ -125,3 +130,4 @@ sudo pacman -S --needed "${base_packages[@]}"
 sudo pacman -S --needed "${hypr[@]}"
 yay -S --needed --noconfirm --removemake --answerdiff None "${yay_hypr[@]}"
 flatpak install flathub "${flatpaks[@]}"
+sudo mkinitcpio -P
