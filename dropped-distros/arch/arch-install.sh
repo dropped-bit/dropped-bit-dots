@@ -94,8 +94,8 @@ hypr=(
   "slurp" # screenshots
   # "network-manager-applet"
   "gvfs"
-  # "blueman" # bluethtooth
-  # "bluez" # bluetooth
+  "blueman" # bluethtooth
+  "bluez" # bluetooth
   # "polkit-gnome" # polkit
   "font-manager"
   "playerctl" # volume etc
@@ -107,7 +107,7 @@ hypr=(
   # "nwg-look" # set gtk themes
   # "libadwaita"
   "brightnessctl"
-  # "swaync" # notification center
+  "swaync" # notification center
   # "gnome-bluetooth-3.0" # for ags bar
   # "libgtop" # required for resource monitoring modules
   # "dart-sass" # compiler for sass/scss
@@ -116,7 +116,7 @@ hypr=(
 yay_hypr=(
   "hyprshot"
   # "aylurs-gtk-shell"
-  "kanata" # keyboard modifier
+  # "kanata" # keyboard modifier
   )
 
 # Flatpaks

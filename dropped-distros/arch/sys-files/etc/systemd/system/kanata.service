@@ -1,11 +1,11 @@
 [Unit]
-Description=Kanata service for remapping keys
+Description=Kanata keyboard remapper
+Documentation=https://github.com/jtroo/kanata
 
 [Service]
-User=root
-ExecStart=kanata -c /home/holmes/.config/kanata/kanata.kbd
-Restart=always
-RestartSec=3
+ExecStart=/usr/bin/kanata --cfg /home/holmes/.config/kanata/config.kbd
+Restart=on-failure
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
+

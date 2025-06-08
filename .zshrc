@@ -55,6 +55,8 @@ alias tree='eza --color=always --icons --long --all --tree --level=3'
 # alias cat='bat'
 alias os='fastfetch -c $HOME/.config/fastfetch/fastfetch.jsonc'
 alias nvex='NVIM_APPNAME=nvex nvim'
+alias dropped-arch='nvex $HOME/dropped-bit-dots/dropped-distros/arch/arch-install.sh'
+alias dropped-update='$HOME/dropped-bit-dots/dropped-distros/arch/arch-install.sh'
 
 # Keybindings
 bindkey -e
