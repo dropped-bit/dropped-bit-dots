@@ -20,3 +20,6 @@ vim.keymap.set("v", "<space>x", ":lua<CR>")
 
 -- better yanking ;)
 vim.keymap.set("v", "<leader>yp", ":'<,'>y+<CR>", { desc = "[Y]ank to [P]lus" })
+
+-- use jk to exist insert mode
+vim.keymap.set('i', 'jk', '<Esc>', { noremap = true })

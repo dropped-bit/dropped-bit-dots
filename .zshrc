@@ -57,6 +57,7 @@ alias os='fastfetch -c $HOME/.config/fastfetch/fastfetch.jsonc'
 alias nvex='NVIM_APPNAME=nvex nvim'
 alias dropped-arch='nvex $HOME/dropped-bit-dots/dropped-distros/arch/arch-install.sh'
 alias dropped-update='$HOME/dropped-bit-dots/dropped-distros/arch/arch-install.sh'
+alias zd='ZED_DEVICE_ID=0xa7a0 /home/holmes/.local/zed.app/bin/zed'
 
 # Keybindings
 bindkey -e
@@ -119,3 +120,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export "PATH=$PATH:$HOME/.local/opt/go/bin"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+source $HOME/.api/avante_anthropic_api
