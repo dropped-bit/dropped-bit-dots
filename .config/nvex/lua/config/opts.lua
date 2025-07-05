@@ -1,6 +1,8 @@
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+-- views can only be fully collapsed with the global statusline
+vim.opt.laststatus = 3
 
 vim.opt.number = true
 vim.opt.relativenumber = true
